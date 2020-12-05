@@ -1,0 +1,77 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "Receive SMS"
+host: "sms.adrium.dev"
+schemes:
+- "https"
+paths:
+  /:
+    get:
+      produces:
+      - "text/html"
+      responses:
+        200:
+          description: "Render index.html"
+          headers:
+            Content-Type:
+              type: "string"
+      x-amazon-apigateway-integration:
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:REGION_APIGW:lambda:path/2015-03-31/functions/ARN_LAMBDA/invocations"
+        responses:
+          default:
+            statusCode: "200"
+  /api/messages/{number}:
+    get:
+      produces:
+      - "application/json"
+      parameters:
+      - name: "number"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "List messages for given number"
+      x-amazon-apigateway-integration:
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:REGION_APIGW:lambda:path/2015-03-31/functions/ARN_LAMBDA/invocations"
+        responses:
+          default:
+            statusCode: "200"
+  /api/numbers:
+    get:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "List available numbers"
+      x-amazon-apigateway-integration:
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:REGION_APIGW:lambda:path/2015-03-31/functions/ARN_LAMBDA/invocations"
+        responses:
+          default:
+            statusCode: "200"
+  /{file+}:
+    get:
+      parameters:
+      - name: "file"
+        in: "path"
+        type: "string"
+      responses:
+        200:
+          description: "Render file"
+          headers:
+            Content-Type:
+              type: "string"
+      x-amazon-apigateway-integration:
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:REGION_APIGW:lambda:path/2015-03-31/functions/ARN_LAMBDA/invocations"
+        responses:
+          default:
+            statusCode: "200"
