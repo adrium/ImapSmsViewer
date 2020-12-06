@@ -1,4 +1,5 @@
 {
 	"assetpath": "assets"
 	, "smsprefix": "SMS with "
+	, "maxmessages": 8
 }

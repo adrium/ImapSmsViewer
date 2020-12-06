@@ -1,0 +1,14 @@
+{
+	"types": {
+		"-": "nothing"
+		, ".html": "text/html"
+		, ".css": "text/css"
+		, ".js": "application/javascript"
+		, "": "text/plain"
+	}
+	, "paths": {
+		"index": "/index.html"
+		, "numbers": "/api/numbers"
+		, "messages": "/api/messages"
+	}
+}

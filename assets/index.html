@@ -1,27 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Adrium Test</title>
-<meta property="og:image" content="https://avatars3.githubusercontent.com/u/23739584?s=320" />
+<title>Free Receive Disposable SMS</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css">
+<link rel="shortcut icon" href="data:image/jpg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCABAAEADASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAwUGAQIE/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQIAAwQF/9oADAMBAAIQAxAAAAHs5Nx+8rExrViYori5TKsWjl0dqNB6YjV+WScymhytmOyadKuba3PoRlPFreQmEyrE1OtXF2RWJiisTFP/xAAdEAEBAQEBAAIDAAAAAAAAAAABAAIDBBETEiMk/9oACAEBAAEFAiIiIiIiIiIiIiIiIi8GB4d9P19eeXycOeTzcc/z9X5iLy88b571+HlOuTf2Z+zlgcdtfqIiIiIiIiIiIiIiIiL/xAAbEQEBAAIDAQAAAAAAAAAAAAABAAIRAxITMf/aAAgBAwEBPwFmZuTPobnl+bnmIdlmbLxLz18jHqTMzf/EABsRAAIDAAMAAAAAAAAAAAAAAAABAhETEiAx/9oACAECAQE/AekI8nRl7RkxqmRdGzNL9JS5Pr//xAAgEAACAgICAgMAAAAAAAAAAAABAgADERIhQTFAECJh/9oACAEBAAY/AvZsZVV7R4BmLaNX6YDEGFAYKGnKjYgmBq1Vm7zBmvVvk4t0u/THS6xXY+Mcyj7DGmployNQmogNdmr95MCswZ/a/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFAURBBYXH/2gAIAQEAAT8h5IAAAByZfhjq6/QJlmqBl7jW5ZUyShWXsqVvo8VfkSKpxgEiaxarECLXs6x7goC2Hc6YAogVhOzlAAAAP//aAAwDAQACAAMAAAAQgB/rBf8ASQPq4HqAFP/EABwRAAICAwEBAAAAAAAAAAAAAAERACEgMVGBof/aAAgBAwEBPxDABNRNGytv2WENFS0IhVAqFVnv0KVIuQSBiH//xAAaEQEBAQEBAQEAAAAAAAAAAAABABEhMVGh/9oACAECAQE/ECIiXJGunhsctfTYsB2N6m3Th8/HZ24+zaMREX//xAAfEAEBAAICAgMBAAAAAAAAAAABABExIUFRoWFxgZH/2gAIAQEAAT8QOox1GOo6jGOoxjqMYxjHUYxjHUYxb6mGhgc4f3+TLwXI8fPfcvOCOBjZN+ZVL6NDGDD7subMwLk8HqAuK3MH4jHUqD10x37sItT7ULv55kHwOlMx+OTuzi5CcYHXnluh+es46uY0K+cHPcYx1GOoxjqMYxjHUYxjGOoxjGOr/9k=">
 <style>
-	html, body, h1 { height: 100%; margin: 0; }
-
 	body {
-		background-image: linear-gradient(135deg, #50a080, #103010)
+		margin: 0;
+		background-color: #333;
+		color: white;
+		font-family: Helvetica, Arial, sans-serif;
 	}
 
 	h1 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font: bold 200px Helvetica, Arial, sans-serif;
+		padding: 20px;
+		font-size: 64px;
+		font-weight: bold;
+		background-image: linear-gradient(100deg, #c63, #fc9);
+		text-align: center;
+	}
+
+	section.text, .messages, .messages li {
+		margin: 8px auto;
+		width: 80%;
+		padding: 12px;
+		border-radius: 12px;
+	}
+
+	section.text {
+		text-align: center;
+		background: #444;
+	}
+
+	a, a:visited { color: #c63 }
+
+	button {
+		cursor: pointer;
+		padding: 12px 32px;
+		margin: 4px auto;
+		border: 0;
+		background-color: #666;
 		color: white;
 	}
 
+	.numbers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.numbers li {
+		margin: 40px;
+		border: 1px solid #666;
+		padding: 20px;
+		width: 200px;
+		list-style: none;
+	}
+
+	.numbers * {
+		display: block;
+		text-align: center;
+	}
+
+	.numbers img {
+		width: 80%;
+		margin: 20% auto;
+	}
+
+	.messages li {
+		list-style: none;
+		border: 1px solid #666;
+	}
+
+	.fa-times:before{content:"\f00d"}.fa-sync:before{content:"\f021"}.fa-arrow-right:before{content:"\f061"}
 </style>
 </head>
 
 <body>
-	<h1>Receive SMS</h1>
+
+<h1>Free Receive Disposable SMS</h1>
+
+<section class="text">
+	<p>Safe service to receive SMS on a number from Switzerland.</p>
+	<p>Sicherer Dienst zum Empfang von SMS über eine Nummer aus der Schweiz.</p>
+
+	<p>Keep your personal number private and receive messages online.
+	<a href="https://sms.adrium.dev">sms.adrium.dev</a> is a free service for receiving SMS messages online.
+	There is no need to register. Just select your phone number from the list below.</p>
+
+	<p>Behalten Sie Ihre persönliche Nummer für sich und empfangen Nachrichten online.
+	<a href="https://sms.adrium.dev">sms.adrium.dev</a> ist ein kostenloser Dienst,
+	um SMS-Nachrichten online zu empfangen.
+	Eine Registrierung ist nicht erforderlich. Wählen Sie einfach Ihre Telefonnummer aus der Liste unten aus.</p>
+</section>
+
+<div id="app">
+	<ul class="numbers" v-if="page == 'numbers'">
+		<li v-for="(number, id) in numbers">
+			<h3>{{ number.name }}</h3>
+			<code>{{ number.number }}</code>
+			<img :src="number.image">
+			<button class="fas fa-arrow-right" @click="showMessages(id)"> Open</button>
+		</li>
+	</ul>
+
+	<div class="messages" v-if="page == 'messages'">
+		<h2>{{ numbers[id].name }}</h2>
+		<button class="fas fa-times" @click="showNumbers()"> Close</button>
+		<button class="fas fa-sync" @click="reloadMessages()"> Reload</button>
+		<li v-for="message in messages">
+			<h3>{{ message.from }}</h3>
+			<p>{{ message.body }}</p>
+		</li>
+	</div>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="app.js"></script>
+
 </body>
 </html>

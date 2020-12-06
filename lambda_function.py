@@ -8,10 +8,10 @@ def lambda_handler(event, context):
 	config = getConfig()
 	path = event['path']
 
-	if path.startswith('/api/numbers'):
+	if path.startswith(config['paths']['numbers']):
 		return numbers(config, event)
 
-	if path.startswith('/api/messages'):
+	if path.startswith(config['paths']['messages']):
 		return messages(config, event)
 
 	return render(config, path)
@@ -33,9 +33,12 @@ def messages(config, event):
 	result = getMails(config['numbers'][number]['secrets'])
 
 	result = [ {
-		'rcpt': msg['subject'].replace(config['smsprefix'], ''),
+		'from': msg['subject'].replace(config['smsprefix'], ''),
 		'body': msg['body']
 	} for msg in result ]
+
+	result = result[:config['maxmessages']]
+	result.reverse()
 
 	return json(result)
 
@@ -43,11 +46,13 @@ def messages(config, event):
 def render(config, path):
 
 	result = html('Not found', 404)
-	path = config['assetpath'] + ('/index.html' if path == '/' else path)
+	path = config['assetpath'] + (config['paths']['index'] if path == '/' else path)
 	
+	type = [ type for (ext, type) in config['types'].items() if path.endswith(ext) ]
+
 	if isfile(path):
 		with open(path) as file:
-			result = html(file.read())
+			result = html(file.read(), type[0])
 
 	return result
 
@@ -55,5 +60,10 @@ def render(config, path):
 def json(content: dict, status: int = 200):
 	return { 'statusCode': status, 'body': jsonify(content) }
 
-def html(content: str, status: int = 200):
-	return { 'statusCode': status, 'headers': { 'Content-Type': 'text/html' }, 'body': content }
+
+def html(content: str, type: str, status: int = 200):
+	return {
+		'statusCode': status,
+		'body': content,
+		'headers': { 'Content-Type': type, 'Cache-Control': 'max-age=864000' }
+	}
