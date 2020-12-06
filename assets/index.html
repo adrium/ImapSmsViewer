@@ -3,6 +3,7 @@
 <head>
 <title>Free Receive Disposable SMS</title>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css">
 <link rel="shortcut icon" href="data:image/jpg;base64,/9j/4AAQSkZJRgABAQIAJQAlAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCABAAEADASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAwUGAQIE/8QAGQEAAgMBAAAAAAAAAAAAAAAAAQIAAwQF/9oADAMBAAIQAxAAAAHs5Nx+8rExrViYori5TKsWjl0dqNB6YjV+WScymhytmOyadKuba3PoRlPFreQmEyrE1OtXF2RWJiisTFP/xAAdEAEBAQEBAAIDAAAAAAAAAAABAAIDBBETEiMk/9oACAEBAAEFAiIiIiIiIiIiIiIiIi8GB4d9P19eeXycOeTzcc/z9X5iLy88b571+HlOuTf2Z+zlgcdtfqIiIiIiIiIiIiIiIiL/xAAbEQEBAAIDAQAAAAAAAAAAAAABAAIRAxITMf/aAAgBAwEBPwFmZuTPobnl+bnmIdlmbLxLz18jHqTMzf/EABsRAAIDAAMAAAAAAAAAAAAAAAABAhETEiAx/9oACAECAQE/AekI8nRl7RkxqmRdGzNL9JS5Pr//xAAgEAACAgICAgMAAAAAAAAAAAABAgADERIhQTFAECJh/9oACAEBAAY/AvZsZVV7R4BmLaNX6YDEGFAYKGnKjYgmBq1Vm7zBmvVvk4t0u/THS6xXY+Mcyj7DGmployNQmogNdmr95MCswZ/a/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFAURBBYXH/2gAIAQEAAT8h5IAAAByZfhjq6/QJlmqBl7jW5ZUyShWXsqVvo8VfkSKpxgEiaxarECLXs6x7goC2Hc6YAogVhOzlAAAAP//aAAwDAQACAAMAAAAQgB/rBf8ASQPq4HqAFP/EABwRAAICAwEBAAAAAAAAAAAAAAERACEgMVGBof/aAAgBAwEBPxDABNRNGytv2WENFS0IhVAqFVnv0KVIuQSBiH//xAAaEQEBAQEBAQEAAAAAAAAAAAABABEhMVGh/9oACAECAQE/ECIiXJGunhsctfTYsB2N6m3Th8/HZ24+zaMREX//xAAfEAEBAAICAgMBAAAAAAAAAAABABExIUFRoWFxgZH/2gAIAQEAAT8QOox1GOo6jGOoxjqMYxjHUYxjHUYxb6mGhgc4f3+TLwXI8fPfcvOCOBjZN+ZVL6NDGDD7subMwLk8HqAuK3MH4jHUqD10x37sItT7ULv55kHwOlMx+OTuzi5CcYHXnluh+es46uY0K+cHPcYx1GOoxjqMYxjHUYxjGOoxjGOr/9k=">
 <style>
 	body {
@@ -32,7 +33,7 @@
 		background: #444;
 	}
 
-	a, a:visited { color: #c63 }
+	a { color: #c63 }
 
 	button {
 		cursor: pointer;
@@ -72,7 +73,21 @@
 		border: 1px solid #666;
 	}
 
-	.fa-times:before{content:"\f00d"}.fa-sync:before{content:"\f021"}.fa-arrow-right:before{content:"\f061"}
+	footer {
+		text-align: center;
+	}
+
+	footer a {
+		text-decoration: none;
+		color: white;
+	}
+
+	footer a:hover {
+		text-shadow: 0 0 4px white;
+	}
+
+	.fa-times:before{content:"\f00d"}.fa-sync:before{content:"\f021"}
+	.fa-arrow-right:before{content:"\f061"}.fa-github:before{content:"\f09b"}
 </style>
 </head>
 
@@ -114,6 +129,10 @@
 		</li>
 	</div>
 </div>
+
+<footer>
+	<a class="fab fa-github" href="https://github.com/adrium/ImapSmsViewer"> Project on Github</a>
+</footer>
 
 <script src="https://unpkg.com/vue"></script>
 <script src="app.js"></script>
