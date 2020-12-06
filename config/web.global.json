@@ -4,7 +4,12 @@
 		, ".html": "text/html; charset=utf-8"
 		, ".css": "text/css"
 		, ".js": "application/javascript"
+		, ".jpg": "image/jpeg"
 		, "": "text/plain"
+	}
+	, "binary_types": {
+		"image/": true
+		, "": false
 	}
 	, "paths": {
 		"index": "/index.html"

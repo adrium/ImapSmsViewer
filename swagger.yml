@@ -79,3 +79,5 @@ paths:
         responses:
           default:
             statusCode: "200"
+x-amazon-apigateway-binary-media-types:
+- "*/*"
