@@ -1,7 +1,7 @@
 {
 	"types": {
 		"-": "nothing"
-		, ".html": "text/html"
+		, ".html": "text/html; charset=utf-8"
 		, ".css": "text/css"
 		, ".js": "application/javascript"
 		, "": "text/plain"

@@ -12,20 +12,19 @@ app.vue = new Vue({
 	},
 	methods: {
 		showNumbers() {
-			this.page = 'numbers'
 			this.messages = []
 			fetch(`${app.baseurl}/numbers`)
 				.then(x => x.json()).then(x => this.numbers = x)
+				.then(fn => this.page = 'numbers')
 		},
 		showMessages(id) {
 			this.id = id
-			this.reloadMessages().then(fn => {
-				this.page = 'messages'
-			})
+			this.reloadMessages()
 		},
 		reloadMessages() {
 			return fetch(`${app.baseurl}/messages/${this.id}`, { cache: 'no-store' })
 				.then(x => x.json()).then(x => this.messages = x)
+				.then(fn => this.page = 'messages')
 		}
 	},
 	mounted() {
